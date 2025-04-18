@@ -175,7 +175,7 @@ export default function GercabGo() {
   };
   
 
-  const renderList = (items: any[], render: (item: any, idx: number) => JSX.Element) => <div className="grid gap-2">{items.map(render)}</div>;
+  const renderList = (items: any[], render: (item: any, idx: number) => React.ReactNode) => <div className="grid gap-2">{items.map(render)}</div>;
 
   return (
     <div className="max-w-4xl mx-auto px-4 pt-8 pb-16 bg-white rounded-3xl shadow-2xl border border-green-300">
