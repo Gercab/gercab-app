@@ -140,11 +140,11 @@ export default function GercabGo() {
     <div className="max-w-4xl mx-auto px-4 pt-8 pb-16 bg-white rounded-3xl shadow-2xl border border-green-300">
       <div className="text-center mb-6">
         <div className="flex items-center justify-center gap-4">
-          <img src="/logo.png" alt="Logo" className="w-24 h-24" />
+          <img src="/logo.png" alt="Logo" className="w-16 h-16" />
           <div>
-            <h1 className="text-3xl font-bold text-green-700">Gercab-Go</h1>
-            <p className="text-sm text-blue-600">Gerakan Cinta Alam dan Budaya</p>
-            <p className="text-3X1 font-bold text-red-1000">SMP NEGERI 2 KAYEN</p>
+            <h1 className="text-3xl font-bold text-green-700">GERCAB-GO</h1>
+            <p className="text-sm text-gray-600">Gerakan Cinta Alam dan Budaya</p>
+            <p className="text-sm text-gray-500">SMP Negeri 2 Kayen</p>
             <p className="text-xs mt-1 text-gray-400 italic">By: @Mr.Tri25</p>
           </div>
         </div>
