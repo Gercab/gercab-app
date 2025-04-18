@@ -126,13 +126,53 @@ export default function GercabGo() {
     reader.onloadend = () => type === "foto" ? setFoto(reader.result as string) : setVideo(reader.result as string);
     reader.readAsDataURL(file);
   };
-
   const exportAll = {
-    jejak: () => exportToPDF(["Nama", "Kelas", "Aktivitas", "Lokasi", "Tanggal"], logList.map(({ foto, ...d }) => d), "Jejak_Hijau") || exportToExcel(logList.map(({ foto, ...d }) => d), "Jejak_Hijau"),
-    lapor: () => exportToPDF(["Pelapor", "Lokasi", "Deskripsi", "Tanggal"], laporanList, "Laporan") || exportToExcel(laporanList, "Laporan"),
-    agenda: () => exportToPDF(["Judul", "Tanggal", "Lokasi", "Keterangan"], agendaList, "Agenda") || exportToExcel(agendaList, "Agenda"),
-    galeri: () => exportToPDF(["Lokasi", "Jenis", "Bentuk", "Waktu"], galeriList.map(({ foto, video, ...d }) => d), "Galeri") || exportToExcel(galeriList.map(({ foto, video, ...d }) => d), "Galeri")
+    jejak: () => {
+      exportToPDF(
+        ["Nama", "Kelas", "Aktivitas", "Lokasi", "Tanggal"],
+        logList.map(({ foto, ...d }) => d),
+        "Jejak_Hijau"
+      );
+      exportToExcel(
+        logList.map(({ foto, ...d }) => d),
+        "Jejak_Hijau"
+      );
+    },
+    lapor: () => {
+      exportToPDF(
+        ["Pelapor", "Lokasi", "Deskripsi", "Tanggal"],
+        laporanList,
+        "Laporan"
+      );
+      exportToExcel(
+        laporanList,
+        "Laporan"
+      );
+    },
+    agenda: () => {
+      exportToPDF(
+        ["Judul", "Tanggal", "Lokasi", "Keterangan"],
+        agendaList,
+        "Agenda"
+      );
+      exportToExcel(
+        agendaList,
+        "Agenda"
+      );
+    },
+    galeri: () => {
+      exportToPDF(
+        ["Lokasi", "Jenis", "Bentuk", "Waktu"],
+        galeriList.map(({ foto, video, ...d }) => d),
+        "Galeri"
+      );
+      exportToExcel(
+        galeriList.map(({ foto, video, ...d }) => d),
+        "Galeri"
+      );
+    }
   };
+  
 
   const renderList = (items: any[], render: (item: any, idx: number) => JSX.Element) => <div className="grid gap-2">{items.map(render)}</div>;
 
